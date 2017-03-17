@@ -1,0 +1,30 @@
+//Script that shows temperature effects of military operations
+//Sample dataset:
+function personnel(val){
+  // Bad, Moderate, or Good conditions
+//Convert to F
+    val = Round(val * (9/5) + 32, 2);
+
+//Null
+//    if (valF == NULL||valF ==false)
+//    {
+//        return "Null";
+//    }  
+//Bad Weather
+    
+    if (val<0 || val>90)
+  {
+    return "Unfavorable";
+  }
+//Moderately Bad
+    if (val>=0 && val <32 || val>=80 && val<90)
+  {
+    return "Marginal";
+  }
+
+  
+  else {
+      return "Favorable";
+  }
+}
+personnel($feature.Temperature_degC);
